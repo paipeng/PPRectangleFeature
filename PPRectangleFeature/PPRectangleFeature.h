@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PPLine.h"
 
 @interface PPRectangleFeature : NSObject
 
+@property (nonatomic) CGPoint topLeft;
+@property (nonatomic) CGPoint topRight;
+@property (nonatomic) CGPoint bottomRight;
+@property (nonatomic) CGPoint bottomLeft;
 @end

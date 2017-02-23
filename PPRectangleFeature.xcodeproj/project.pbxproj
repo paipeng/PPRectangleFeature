@@ -9,7 +9,21 @@
 /* Begin PBXBuildFile section */
 		73946A191E5E86D500B6BFBD /* PPRectangleFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */; };
 		73946A1A1E5E86D500B6BFBD /* PPRectangleFeature.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */; };
+		73946A241E5E86FE00B6BFBD /* PPLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A221E5E86FE00B6BFBD /* PPLine.m */; };
+		73946A251E5E86FE00B6BFBD /* PPRectangleFeature+expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A231E5E86FE00B6BFBD /* PPRectangleFeature+expand.m */; };
+		73946A2D1E5E87B700B6BFBD /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A2C1E5E87B700B6BFBD /* Tests.m */; };
+		73946A2F1E5E87B700B6BFBD /* libPPRectangleFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73946A141E5E86D500B6BFBD /* libPPRectangleFeature.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73946A301E5E87B700B6BFBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73946A0C1E5E86D500B6BFBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73946A131E5E86D500B6BFBD;
+			remoteInfo = PPRectangleFeature;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		73946A121E5E86D500B6BFBD /* CopyFiles */ = {
@@ -28,6 +42,13 @@
 		73946A141E5E86D500B6BFBD /* libPPRectangleFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPPRectangleFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRectangleFeature.h; sourceTree = "<group>"; };
 		73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPRectangleFeature.m; sourceTree = "<group>"; };
+		73946A201E5E86FE00B6BFBD /* PPLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLine.h; sourceTree = "<group>"; };
+		73946A211E5E86FE00B6BFBD /* PPRectangleFeature+expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPRectangleFeature+expand.h"; sourceTree = "<group>"; };
+		73946A221E5E86FE00B6BFBD /* PPLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLine.m; sourceTree = "<group>"; };
+		73946A231E5E86FE00B6BFBD /* PPRectangleFeature+expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PPRectangleFeature+expand.m"; sourceTree = "<group>"; };
+		73946A2A1E5E87B700B6BFBD /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73946A2C1E5E87B700B6BFBD /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		73946A2E1E5E87B700B6BFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +59,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73946A271E5E87B700B6BFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73946A2F1E5E87B700B6BFBD /* libPPRectangleFeature.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				73946A161E5E86D500B6BFBD /* PPRectangleFeature */,
+				73946A2B1E5E87B700B6BFBD /* Tests */,
 				73946A151E5E86D500B6BFBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				73946A141E5E86D500B6BFBD /* libPPRectangleFeature.a */,
+				73946A2A1E5E87B700B6BFBD /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,10 +91,23 @@
 		73946A161E5E86D500B6BFBD /* PPRectangleFeature */ = {
 			isa = PBXGroup;
 			children = (
+				73946A201E5E86FE00B6BFBD /* PPLine.h */,
+				73946A211E5E86FE00B6BFBD /* PPRectangleFeature+expand.h */,
+				73946A221E5E86FE00B6BFBD /* PPLine.m */,
+				73946A231E5E86FE00B6BFBD /* PPRectangleFeature+expand.m */,
 				73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */,
 				73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */,
 			);
 			path = PPRectangleFeature;
+			sourceTree = "<group>";
+		};
+		73946A2B1E5E87B700B6BFBD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				73946A2C1E5E87B700B6BFBD /* Tests.m */,
+				73946A2E1E5E87B700B6BFBD /* Info.plist */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +130,24 @@
 			productReference = 73946A141E5E86D500B6BFBD /* libPPRectangleFeature.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		73946A291E5E87B700B6BFBD /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73946A321E5E87B700B6BFBD /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				73946A261E5E87B700B6BFBD /* Sources */,
+				73946A271E5E87B700B6BFBD /* Frameworks */,
+				73946A281E5E87B700B6BFBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73946A311E5E87B700B6BFBD /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 73946A2A1E5E87B700B6BFBD /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +158,11 @@
 				ORGANIZATIONNAME = "Pai Peng";
 				TargetAttributes = {
 					73946A131E5E86D500B6BFBD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7SKZP3W4L7;
+						ProvisioningStyle = Automatic;
+					};
+					73946A291E5E87B700B6BFBD = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7SKZP3W4L7;
 						ProvisioningStyle = Automatic;
@@ -115,20 +182,49 @@
 			projectRoot = "";
 			targets = (
 				73946A131E5E86D500B6BFBD /* PPRectangleFeature */,
+				73946A291E5E87B700B6BFBD /* Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73946A281E5E87B700B6BFBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		73946A101E5E86D500B6BFBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73946A251E5E86FE00B6BFBD /* PPRectangleFeature+expand.m in Sources */,
 				73946A191E5E86D500B6BFBD /* PPRectangleFeature.m in Sources */,
+				73946A241E5E86FE00B6BFBD /* PPLine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73946A261E5E87B700B6BFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73946A2D1E5E87B700B6BFBD /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73946A311E5E87B700B6BFBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73946A131E5E86D500B6BFBD /* PPRectangleFeature */;
+			targetProxy = 73946A301E5E87B700B6BFBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		73946A1B1E5E86D500B6BFBD /* Debug */ = {
@@ -239,6 +335,28 @@
 			};
 			name = Release;
 		};
+		73946A331E5E87B700B6BFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7SKZP3W4L7;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paipeng.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		73946A341E5E87B700B6BFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7SKZP3W4L7;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paipeng.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -256,6 +374,14 @@
 			buildConfigurations = (
 				73946A1E1E5E86D500B6BFBD /* Debug */,
 				73946A1F1E5E86D500B6BFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		73946A321E5E87B700B6BFBD /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73946A331E5E87B700B6BFBD /* Debug */,
+				73946A341E5E87B700B6BFBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
