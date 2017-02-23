@@ -16,6 +16,9 @@
 + (PPLine*) initPPLineWithPointA: (CGPoint) pointA withPointB: (CGPoint) pointB;
 - (CGFloat) getFactorA;
 - (CGFloat) getConstantB;
+- (CGFloat) getX;
+- (CGFloat) getY;
+- (BOOL) isTLine;
 - (void) calculate;
 
 + (CGPoint*) calculateIntersectionPointWithLine: (PPLine*) lineA withLine: (PPLine*) lineB;

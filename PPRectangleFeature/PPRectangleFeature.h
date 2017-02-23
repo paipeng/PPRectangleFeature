@@ -15,4 +15,6 @@
 @property (nonatomic) CGPoint topRight;
 @property (nonatomic) CGPoint bottomRight;
 @property (nonatomic) CGPoint bottomLeft;
+
+- (CIRectangleFeature*) addBorder: (CGFloat) border;
 @end

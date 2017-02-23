@@ -25,12 +25,6 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-    PPRectangleFeature* feature = [PPRectangleFeature new];
-}
-
 - (void)testPPLine {
     CGFloat distance = 10;
     
@@ -70,8 +64,10 @@
     
     degree = round([line getAlphaDegree]*1000)/1000;
     
-    XCTAssertEqual(a, INFINITY, @"failed");
-    XCTAssertEqual(b, -INFINITY, @"failed");
+    XCTAssertEqual(a, 1, @"failed");
+    XCTAssertEqual(b, -10, @"failed");
+    XCTAssertEqual([line getX], 10, @"failed");
+    XCTAssertEqual([line getY], INFINITY, @"failed");
     XCTAssertEqual(degree, 90, @"failed");
     d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
     XCTAssertEqual(d, 10, @"failed");
@@ -82,9 +78,13 @@
     
     degree = round([line getAlphaDegree]*1000)/1000;
     
-    XCTAssertEqual(a, -INFINITY, @"failed");
-    XCTAssertEqual(b, INFINITY, @"failed");
+    XCTAssertEqual(a, 1, @"failed");
+    XCTAssertEqual(b, -10, @"failed");
     XCTAssertEqual(degree, -90, @"failed");
+    
+    XCTAssertEqual([line getX], 10, @"failed");
+    XCTAssertEqual([line getY], INFINITY, @"failed");
+    
     d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
     XCTAssertEqual(d, 10, @"failed");
 
@@ -129,6 +129,35 @@
         XCTAssertEqual(p->y, 5, @"failed");
         free(p);
     }
+}
+
+
+
+- (void)testPPRectangleFeature {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    PPRectangleFeature* feature = [PPRectangleFeature new];
+    
+    feature.topRight = CGPointMake(10, 10);
+    feature.topLeft = CGPointMake(0, 10);
+    feature.bottomLeft = CGPointMake(0, 0);
+    feature.bottomRight = CGPointMake(10, 0);
+    
+    
+    CIRectangleFeature* rF = [feature addBorder:10];
+    
+    
+    XCTAssertEqual(rF.topLeft.x, -10, @"failed");
+    XCTAssertEqual(rF.topLeft.y, 20, @"failed");
+    
+    XCTAssertEqual(rF.topRight.x, 20, @"failed");
+    XCTAssertEqual(rF.topRight.y, 20, @"failed");
+    
+    XCTAssertEqual(rF.bottomLeft.x, -10, @"failed");
+    XCTAssertEqual(rF.bottomLeft.y, -10, @"failed");
+    
+    XCTAssertEqual(rF.bottomRight.x, 20, @"failed");
+    XCTAssertEqual(rF.bottomRight.y, -10, @"failed");
 }
 
 - (void)testPerformanceExample {

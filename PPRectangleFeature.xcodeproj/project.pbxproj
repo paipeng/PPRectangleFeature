@@ -10,7 +10,6 @@
 		73946A191E5E86D500B6BFBD /* PPRectangleFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */; };
 		73946A1A1E5E86D500B6BFBD /* PPRectangleFeature.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */; };
 		73946A241E5E86FE00B6BFBD /* PPLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A221E5E86FE00B6BFBD /* PPLine.m */; };
-		73946A251E5E86FE00B6BFBD /* PPRectangleFeature+expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A231E5E86FE00B6BFBD /* PPRectangleFeature+expand.m */; };
 		73946A2D1E5E87B700B6BFBD /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A2C1E5E87B700B6BFBD /* Tests.m */; };
 		73946A2F1E5E87B700B6BFBD /* libPPRectangleFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73946A141E5E86D500B6BFBD /* libPPRectangleFeature.a */; };
 /* End PBXBuildFile section */
@@ -43,9 +42,7 @@
 		73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRectangleFeature.h; sourceTree = "<group>"; };
 		73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPRectangleFeature.m; sourceTree = "<group>"; };
 		73946A201E5E86FE00B6BFBD /* PPLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLine.h; sourceTree = "<group>"; };
-		73946A211E5E86FE00B6BFBD /* PPRectangleFeature+expand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPRectangleFeature+expand.h"; sourceTree = "<group>"; };
 		73946A221E5E86FE00B6BFBD /* PPLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLine.m; sourceTree = "<group>"; };
-		73946A231E5E86FE00B6BFBD /* PPRectangleFeature+expand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PPRectangleFeature+expand.m"; sourceTree = "<group>"; };
 		73946A2A1E5E87B700B6BFBD /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73946A2C1E5E87B700B6BFBD /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		73946A2E1E5E87B700B6BFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,8 +90,6 @@
 			children = (
 				73946A201E5E86FE00B6BFBD /* PPLine.h */,
 				73946A221E5E86FE00B6BFBD /* PPLine.m */,
-				73946A211E5E86FE00B6BFBD /* PPRectangleFeature+expand.h */,
-				73946A231E5E86FE00B6BFBD /* PPRectangleFeature+expand.m */,
 				73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */,
 				73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */,
 			);
@@ -202,7 +197,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73946A251E5E86FE00B6BFBD /* PPRectangleFeature+expand.m in Sources */,
 				73946A191E5E86D500B6BFBD /* PPRectangleFeature.m in Sources */,
 				73946A241E5E86FE00B6BFBD /* PPLine.m in Sources */,
 			);
