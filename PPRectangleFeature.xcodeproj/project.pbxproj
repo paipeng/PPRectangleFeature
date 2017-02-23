@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73946A191E5E86D500B6BFBD /* PPRectangleFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */; };
+		73946A1A1E5E86D500B6BFBD /* PPRectangleFeature.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73946A121E5E86D500B6BFBD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				73946A1A1E5E86D500B6BFBD /* PPRectangleFeature.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		73946A141E5E86D500B6BFBD /* libPPRectangleFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPPRectangleFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPRectangleFeature.h; sourceTree = "<group>"; };
+		73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPRectangleFeature.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73946A111E5E86D500B6BFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73946A0B1E5E86D500B6BFBD = {
+			isa = PBXGroup;
+			children = (
+				73946A161E5E86D500B6BFBD /* PPRectangleFeature */,
+				73946A151E5E86D500B6BFBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73946A151E5E86D500B6BFBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73946A141E5E86D500B6BFBD /* libPPRectangleFeature.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73946A161E5E86D500B6BFBD /* PPRectangleFeature */ = {
+			isa = PBXGroup;
+			children = (
+				73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */,
+				73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */,
+			);
+			path = PPRectangleFeature;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73946A131E5E86D500B6BFBD /* PPRectangleFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73946A1D1E5E86D500B6BFBD /* Build configuration list for PBXNativeTarget "PPRectangleFeature" */;
+			buildPhases = (
+				73946A101E5E86D500B6BFBD /* Sources */,
+				73946A111E5E86D500B6BFBD /* Frameworks */,
+				73946A121E5E86D500B6BFBD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PPRectangleFeature;
+			productName = PPRectangleFeature;
+			productReference = 73946A141E5E86D500B6BFBD /* libPPRectangleFeature.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73946A0C1E5E86D500B6BFBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Pai Peng";
+				TargetAttributes = {
+					73946A131E5E86D500B6BFBD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7SKZP3W4L7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 73946A0F1E5E86D500B6BFBD /* Build configuration list for PBXProject "PPRectangleFeature" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 73946A0B1E5E86D500B6BFBD;
+			productRefGroup = 73946A151E5E86D500B6BFBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73946A131E5E86D500B6BFBD /* PPRectangleFeature */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73946A101E5E86D500B6BFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73946A191E5E86D500B6BFBD /* PPRectangleFeature.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		73946A1B1E5E86D500B6BFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		73946A1C1E5E86D500B6BFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73946A1E1E5E86D500B6BFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7SKZP3W4L7;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		73946A1F1E5E86D500B6BFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7SKZP3W4L7;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73946A0F1E5E86D500B6BFBD /* Build configuration list for PBXProject "PPRectangleFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73946A1B1E5E86D500B6BFBD /* Debug */,
+				73946A1C1E5E86D500B6BFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73946A1D1E5E86D500B6BFBD /* Build configuration list for PBXNativeTarget "PPRectangleFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73946A1E1E5E86D500B6BFBD /* Debug */,
+				73946A1F1E5E86D500B6BFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73946A0C1E5E86D500B6BFBD /* Project object */;
+}
