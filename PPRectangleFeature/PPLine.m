@@ -24,12 +24,12 @@
     if (ppLine) {
         [ppLine setPointA:pointA];
         [ppLine setPointB:pointB];
-        [ppLine calculateAB];
+        [ppLine calculate];
     }
     return ppLine;
 }
 
-- (void) calculateAB {
+- (void) calculate {
     // y = a * x + b;
     a = (self.pointB.y - self.pointA.y) / (self.pointB.x - self.pointA.x);
     b = self.pointB.y - a * (self.pointB.x);
@@ -52,8 +52,12 @@
     return alphaRadian;
 }
 
-- (void) shiftLineWithDistance: (CGFloat) distance {
-    
+- (PPLine*) shiftLineWithDistance: (CGFloat) distance {
+    CGFloat shiftDistance = [self calculateShiftDistanceWithDegree:distance];
+    CGPoint pointA = CGPointMake(self.pointA.x, self.pointA.y + shiftDistance);
+    CGPoint pointB = CGPointMake(self.pointB.x, self.pointB.y + shiftDistance);
+    PPLine* shiftLine = [PPLine initPPLineWithPointA:pointA withPointB:pointB];
+    return shiftLine;
 }
 
 - (CGFloat) calculateShiftDistanceWithDegree: (CGFloat) distance {
@@ -73,4 +77,13 @@
     }
     return intersectionPoint;
 }
+
++ (CGFloat) calculateDistanceBetweenLine: (PPLine*) lineA andLine: (PPLine*) lineB {
+    if ([lineA getFactorA] == [lineB getFactorA]) {
+        return cos([lineA getAlphaRadian]) * ([lineA getConstantB] - [lineB getConstantB]);
+    } else {
+        return 0;
+    }
+}
+
 @end

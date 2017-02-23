@@ -16,10 +16,13 @@
 + (PPLine*) initPPLineWithPointA: (CGPoint) pointA withPointB: (CGPoint) pointB;
 - (CGFloat) getFactorA;
 - (CGFloat) getConstantB;
+- (void) calculate;
 
 + (CGPoint*) calculateIntersectionPointWithLine: (PPLine*) lineA withLine: (PPLine*) lineB;
++ (CGFloat) calculateDistanceBetweenLine: (PPLine*) lineA andLine: (PPLine*) lineB;
+
 - (CGFloat) getAlphaDegree;
 - (CGFloat) getAlphaRadian;
 - (CGFloat) calculateShiftDistanceWithDegree: (CGFloat) distance;
-- (void) shiftLineWithDistance: (CGFloat) distance;
+- (PPLine*) shiftLineWithDistance: (CGFloat) distance;
 @end

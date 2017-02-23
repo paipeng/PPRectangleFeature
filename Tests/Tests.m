@@ -32,6 +32,8 @@
 }
 
 - (void)testPPLine {
+    CGFloat distance = 10;
+    
     PPLine* line = [PPLine initPPLineWithPointA:CGPointMake(1, 1) withPointB:CGPointMake(3, 2)];
     CGFloat a = [line getFactorA];
     CGFloat b = [line getConstantB];
@@ -40,10 +42,13 @@
     XCTAssertEqual(b, 0.5, @"failed");
     XCTAssertEqual(degree, 26.565, @"failed");
     
-    CGFloat d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
+    CGFloat d = round([line calculateShiftDistanceWithDegree:distance]*1000)/1000;
     XCTAssertEqual(d, 11.180, @"failed");
     
+    PPLine* shiftLine = [line shiftLineWithDistance:distance];
     
+    CGFloat sd = [PPLine calculateDistanceBetweenLine:line andLine:shiftLine];
+    XCTAssertEqual(fabs(sd), distance, @"failed");
     
     
     line = [PPLine initPPLineWithPointA:CGPointMake(10, 1) withPointB:CGPointMake(5, 21)];
