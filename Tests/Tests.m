@@ -35,9 +35,14 @@
     PPLine* line = [PPLine initPPLineWithPointA:CGPointMake(1, 1) withPointB:CGPointMake(3, 2)];
     CGFloat a = [line getFactorA];
     CGFloat b = [line getConstantB];
-    
+    CGFloat degree = round([line getAlphaDegree]*1000)/1000;
     XCTAssertEqual(a, 0.5, @"failed");
     XCTAssertEqual(b, 0.5, @"failed");
+    XCTAssertEqual(degree, 26.565, @"failed");
+    
+    CGFloat d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
+    XCTAssertEqual(d, 11.180, @"failed");
+    
     
     
     
@@ -45,8 +50,65 @@
     a = [line getFactorA];
     b = [line getConstantB];
     
+    degree = round([line getAlphaDegree]*1000)/1000;
+    
     XCTAssertEqual(a, -4, @"failed");
     XCTAssertEqual(b, 41, @"failed");
+    XCTAssertEqual(degree, -75.964, @"failed");
+    d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
+    XCTAssertEqual(d, 41.231, @"failed");
+    
+    
+    line = [PPLine initPPLineWithPointA:CGPointMake(10, 1) withPointB:CGPointMake(10, 2)];
+    a = [line getFactorA];
+    b = [line getConstantB];
+    
+    degree = round([line getAlphaDegree]*1000)/1000;
+    
+    XCTAssertEqual(a, INFINITY, @"failed");
+    XCTAssertEqual(b, -INFINITY, @"failed");
+    XCTAssertEqual(degree, 90, @"failed");
+    d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
+    XCTAssertEqual(d, 10, @"failed");
+
+    line = [PPLine initPPLineWithPointA:CGPointMake(10, 2) withPointB:CGPointMake(10, 1)];
+    a = [line getFactorA];
+    b = [line getConstantB];
+    
+    degree = round([line getAlphaDegree]*1000)/1000;
+    
+    XCTAssertEqual(a, -INFINITY, @"failed");
+    XCTAssertEqual(b, INFINITY, @"failed");
+    XCTAssertEqual(degree, -90, @"failed");
+    d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
+    XCTAssertEqual(d, 10, @"failed");
+
+    
+    
+    line = [PPLine initPPLineWithPointA:CGPointMake(10, 2) withPointB:CGPointMake(20, 2)];
+    a = [line getFactorA];
+    b = [line getConstantB];
+    
+    degree = round([line getAlphaDegree]*1000)/1000;
+    
+    XCTAssertEqual(a, 0, @"failed");
+    XCTAssertEqual(b, 2, @"failed");
+    XCTAssertEqual(degree, 0, @"failed");
+    d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
+    XCTAssertEqual(d, 10, @"failed");
+
+    
+    line = [PPLine initPPLineWithPointA:CGPointMake(20, 2) withPointB:CGPointMake(10, 2)];
+    a = [line getFactorA];
+    b = [line getConstantB];
+    
+    degree = round([line getAlphaDegree]*1000)/1000;
+    
+    XCTAssertEqual(a, 0, @"failed");
+    XCTAssertEqual(b, 2, @"failed");
+    XCTAssertEqual(degree, 0, @"failed");
+    d = round([line calculateShiftDistanceWithDegree:10]*1000)/1000;
+    XCTAssertEqual(d, 10, @"failed");
 }
 
 

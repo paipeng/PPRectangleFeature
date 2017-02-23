@@ -7,10 +7,13 @@
 //
 
 #import "PPLine.h"
+#import <math.h>
 
 @interface PPLine() {
     CGFloat a;
     CGFloat b;
+    CGFloat alphaDegree;
+    CGFloat alphaRadian;
 }
 @end
 
@@ -30,6 +33,8 @@
     // y = a * x + b;
     a = (self.pointB.y - self.pointA.y) / (self.pointB.x - self.pointA.x);
     b = self.pointB.y - a * (self.pointB.x);
+    alphaRadian = atan(a);
+    alphaDegree = alphaRadian*180/M_PI;
 }
 
 - (CGFloat) getFactorA {
@@ -37,6 +42,25 @@
 }
 - (CGFloat) getConstantB {
     return b;
+}
+
+- (CGFloat) getAlphaDegree {
+    return alphaDegree;
+}
+
+- (CGFloat) getAlphaRadian {
+    return alphaRadian;
+}
+
+- (void) shiftLineWithDistance: (CGFloat) distance {
+    
+}
+
+- (CGFloat) calculateShiftDistanceWithDegree: (CGFloat) distance {
+    if (alphaDegree != 90 && alphaDegree != -90)
+        return distance / cos(alphaRadian);
+    else
+        return distance;
 }
 
 + (CGPoint*) calculateIntersectionPointWithLine: (PPLine*) lineA withLine: (PPLine*) lineB {

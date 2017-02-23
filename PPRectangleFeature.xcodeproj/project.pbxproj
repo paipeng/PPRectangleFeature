@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				73946A201E5E86FE00B6BFBD /* PPLine.h */,
-				73946A211E5E86FE00B6BFBD /* PPRectangleFeature+expand.h */,
 				73946A221E5E86FE00B6BFBD /* PPLine.m */,
+				73946A211E5E86FE00B6BFBD /* PPRectangleFeature+expand.h */,
 				73946A231E5E86FE00B6BFBD /* PPRectangleFeature+expand.m */,
 				73946A171E5E86D500B6BFBD /* PPRectangleFeature.h */,
 				73946A181E5E86D500B6BFBD /* PPRectangleFeature.m */,
