@@ -16,7 +16,7 @@
     CGPoint expandTopRight;
     CGPoint expandBottomRight;
     CGPoint expandBottomLeft;
-    
+#if 0
     // top
     PPLine* lineTop = [PPLine initPPLineWithPointA:self.topLeft withPointB:self.topRight];
     PPLine* shiftLineTop = [lineTop shiftLineWithDistance:border];
@@ -32,7 +32,23 @@
     // bottom
     PPLine* lineBottom = [PPLine initPPLineWithPointA:self.bottomRight withPointB:self.bottomLeft];
     PPLine* shiftLineBottom = [lineBottom shiftLineWithDistance:-border];
-
+#else
+    // top
+    PPLine* lineTop = [PPLine initPPLineWithPointA:self.topRight withPointB:self.topLeft];
+    PPLine* shiftLineTop = [lineTop shiftLineWithDistance:border];
+    
+    // right
+    PPLine* lineRight = [PPLine initPPLineWithPointA:self.bottomRight withPointB:self.topRight];
+    PPLine* shiftLineRight = [lineRight shiftLineWithDistance:border];
+    
+    // left
+    PPLine* lineLeft = [PPLine initPPLineWithPointA:self.topLeft withPointB:self.bottomLeft];
+    PPLine* shiftLineLeft = [lineLeft shiftLineWithDistance:border];
+    
+    // bottom
+    PPLine* lineBottom = [PPLine initPPLineWithPointA:self.bottomLeft withPointB:self.bottomRight];
+    PPLine* shiftLineBottom = [lineBottom shiftLineWithDistance:-border];
+#endif
     
     CGPoint* p = [PPLine calculateIntersectionPointWithLine:shiftLineTop withLine:shiftLineRight];
     if (p) {
