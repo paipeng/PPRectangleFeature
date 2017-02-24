@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PPRectangleFeature"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "PPRectangleFeature is a class used to expand rectangle area."
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 			This pod has math calculation for lines and rectangle.
                    DESC
 
-  s.homepage     = "http://www.paipeng.com/PPRectangleFeature"
+  s.homepage     = "https://github.com/paipeng/PPRectangleFeature"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
