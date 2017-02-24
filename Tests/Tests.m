@@ -160,6 +160,33 @@
     XCTAssertEqual(rF.bottomRight.y, -10, @"failed");
 }
 
+- (void)testPPRectangleFeature1 {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    PPRectangleFeature* feature = [PPRectangleFeature new];
+    
+    feature.topRight = CGPointMake(10, 15);
+    feature.topLeft = CGPointMake(0, 10);
+    feature.bottomLeft = CGPointMake(0, 0);
+    feature.bottomRight = CGPointMake(10, 5);
+    
+    
+    CIRectangleFeature* rF = [feature addBorder:10];
+    
+    
+    XCTAssertEqual(rF.topLeft.x, -10, @"failed");
+    XCTAssertEqual(round(rF.topLeft.y*100)/100, 16.18, @"failed");
+    
+    XCTAssertEqual(rF.topRight.x, 20, @"failed");
+    XCTAssertEqual(round(rF.topRight.y*100)/100, 31.18, @"failed");
+    
+    XCTAssertEqual(rF.bottomLeft.x, -10, @"failed");
+    XCTAssertEqual(round(rF.bottomLeft.y*100)/100, -16.18, @"failed");
+    
+    XCTAssertEqual(rF.bottomRight.x, 20, @"failed");
+    XCTAssertEqual(round(rF.bottomRight.y*100)/100, -1.18, @"failed");
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
