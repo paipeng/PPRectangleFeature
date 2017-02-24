@@ -87,7 +87,8 @@
 }
 
 - (PPLine*) shiftLineWithDistance: (CGFloat) distance {
-    CGPoint pointA, pointB;
+    CGPoint pointA = CGPointMake(0, 0);
+    CGPoint pointB = CGPointMake(0, 0);
     if (x == INFINITY && y == INFINITY) {
         CGFloat shiftDistance = [self calculateShiftDistanceWithDegree:distance];
         pointA = CGPointMake(self.pointA.x, self.pointA.y + shiftDistance);

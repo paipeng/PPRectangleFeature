@@ -12,10 +12,10 @@
 
 
 - (CIRectangleFeature*) addBorder: (CGFloat) border {
-    CGPoint expandTopLeft;
-    CGPoint expandTopRight;
-    CGPoint expandBottomRight;
-    CGPoint expandBottomLeft;
+    CGPoint expandTopLeft = CGPointMake(0, 0);
+    CGPoint expandTopRight = CGPointMake(0, 0);
+    CGPoint expandBottomRight = CGPointMake(0, 0);
+    CGPoint expandBottomLeft = CGPointMake(0, 0);
 #if 0
     // top
     PPLine* lineTop = [PPLine initPPLineWithPointA:self.topLeft withPointB:self.topRight];
