@@ -133,7 +133,7 @@
 
 
 
-- (void)testPPRectangleFeature {
+- (void)testPPRectangleFeatureAddBorder {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     PPRectangleFeature* feature = [PPRectangleFeature new];
@@ -147,20 +147,20 @@
     CIRectangleFeature* rF = [feature addBorder:10];
     
     
-    XCTAssertEqual(rF.topLeft.x, -10, @"failed");
+    XCTAssertEqual(rF.topLeft.x, 10, @"failed");
     XCTAssertEqual(rF.topLeft.y, 20, @"failed");
     
     XCTAssertEqual(rF.topRight.x, 20, @"failed");
     XCTAssertEqual(rF.topRight.y, 20, @"failed");
     
-    XCTAssertEqual(rF.bottomLeft.x, -10, @"failed");
+    XCTAssertEqual(rF.bottomLeft.x, 10, @"failed");
     XCTAssertEqual(rF.bottomLeft.y, -10, @"failed");
     
     XCTAssertEqual(rF.bottomRight.x, 20, @"failed");
     XCTAssertEqual(rF.bottomRight.y, -10, @"failed");
 }
 
-- (void)testPPRectangleFeature1 {
+- (void)testPPRectangleFeatureAddBorder2 {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     PPRectangleFeature* feature = [PPRectangleFeature new];
@@ -174,17 +174,45 @@
     CIRectangleFeature* rF = [feature addBorder:10];
     
     
-    XCTAssertEqual(rF.topLeft.x, -10, @"failed");
-    XCTAssertEqual(round(rF.topLeft.y*100)/100, 16.18, @"failed");
+    XCTAssertEqual(rF.topLeft.x, 10, @"failed");
+    XCTAssertEqual(round(rF.topLeft.y*100)/100, 26.18, @"failed");
     
     XCTAssertEqual(rF.topRight.x, 20, @"failed");
     XCTAssertEqual(round(rF.topRight.y*100)/100, 31.18, @"failed");
     
-    XCTAssertEqual(rF.bottomLeft.x, -10, @"failed");
-    XCTAssertEqual(round(rF.bottomLeft.y*100)/100, -16.18, @"failed");
+    XCTAssertEqual(rF.bottomLeft.x, 10, @"failed");
+    XCTAssertEqual(round(rF.bottomLeft.y*100)/100, -6.18, @"failed");
     
     XCTAssertEqual(rF.bottomRight.x, 20, @"failed");
     XCTAssertEqual(round(rF.bottomRight.y*100)/100, -1.18, @"failed");
+}
+
+
+- (void)testPPRectangleFeatureAddBorder3 {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    PPRectangleFeature* feature = [PPRectangleFeature new];
+    
+    feature.topRight = CGPointMake(10, 10);
+    feature.topLeft = CGPointMake(0, 10);
+    feature.bottomLeft = CGPointMake(0, 0);
+    feature.bottomRight = CGPointMake(10, 0);
+    
+    
+    CIRectangleFeature* rF = [feature addBorder:10];
+    
+    
+    XCTAssertEqual(rF.topLeft.x, 10, @"failed");
+    XCTAssertEqual(round(rF.topLeft.y*100)/100, 20, @"failed");
+    
+    XCTAssertEqual(rF.topRight.x, 20, @"failed");
+    XCTAssertEqual(round(rF.topRight.y*100)/100, 20, @"failed");
+    
+    XCTAssertEqual(rF.bottomLeft.x, 10, @"failed");
+    XCTAssertEqual(round(rF.bottomLeft.y*100)/100, -10, @"failed");
+    
+    XCTAssertEqual(rF.bottomRight.x, 20, @"failed");
+    XCTAssertEqual(round(rF.bottomRight.y*100)/100, -10, @"failed");
 }
 
 - (void)testPerformanceExample {
